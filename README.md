@@ -26,10 +26,9 @@ Save once → Autofill everywhere.
 > Example:
 
 ```
-https://github.com/rajesh2150/FillUp/blob/master/20251123152032.mp4
+https://github.com/rajesh2150/FillUp/blob/master/demo.mp4
 ```
 
-*(Upload your video to GitHub → copy link → paste here.)*
 
 ---
 
