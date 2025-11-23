@@ -1,28 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const nameField = document.getElementById("name");
-    const mobileField = document.getElementById("mobile");
-    const educationField = document.getElementById("education");
-    const saveBtn = document.getElementById("save");
 
-    // Load saved data into the popup
+    const fields = [
+        "firstName", "middleName", "lastName",
+        "address1", "address2", "country", "state",
+        "city", "zip", "email", "phone",
+        "degreeName", "degreeType", "university",
+        "eduStart", "eduEnd",
+        "company", "workStart", "isCurrent", "workEnd",
+        "positionTitle", "resume"
+    ];
+
     chrome.storage.sync.get(["candidate"], (data) => {
         if (data.candidate) {
-            nameField.value = data.candidate.name || "";
-            mobileField.value = data.candidate.mobile || "";
-            educationField.value = data.candidate.education || "";
+            fields.forEach(id => {
+                if (document.getElementById(id)) {
+                    document.getElementById(id).value = data.candidate[id] || "";
+                }
+            });
         }
     });
 
-    // Save on click
-    saveBtn.addEventListener("click", () => {
-        const candidate = {
-            name: nameField.value,
-            mobile: mobileField.value,
-            education: educationField.value
-        };
+    document.getElementById("save").addEventListener("click", () => {
+        const candidate = {};
+        fields.forEach(id => {
+            candidate[id] = document.getElementById(id).value || "";
+        });
 
         chrome.storage.sync.set({ candidate }, () => {
-            alert("Saved!");
+            alert("Saved Successfully!");
         });
     });
 });

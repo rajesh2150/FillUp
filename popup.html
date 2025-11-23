@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Candidate Autofill</title>
-  <link rel="stylesheet" href="style.css">
+  <title>IBM Autofill</title>
+  <style>
+    body { font-family: Arial; padding: 12px; width: 280px; }
+    label { font-size: 13px; font-weight: bold; }
+    input, select { width: 100%; padding: 6px; margin-bottom: 10px; }
+    button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; }
+  </style>
 </head>
+
 <body>
+<h2>IBM Autofill</h2>
 
-<h2>Autofill Details</h2>
+<label>First Name</label>
+<input id="firstName" type="text">
 
-<label>Name:</label>
-<input id="name" type="text"><br><br>
+<label>Middle Name</label>
+<input id="middleName" type="text">
 
-<label>Mobile:</label>
-<input id="mobile" type="text"><br><br>
+<label>Last Name</label>
+<input id="lastName" type="text">
 
-<label>Education:</label>
-<input id="education" type="text"><br><br>
+<label>Address Line 1</label>
+<input id="address1" type="text">
+
+<label>Address Line 2</label>
+<input id="address2" type="text">
+
+<label>Country (ex: India)</label>
+<input id="country" type="text">
+
+<label>State (ex: Telangana)</label>
+<input id="state" type="text">
+
+<label>City</label>
+<input id="city" type="text">
+
+<label>Pincode</label>
+<input id="zip" type="text">
+
+<label>Email</label>
+<input id="email" type="text">
+
+<label>Phone</label>
+<input id="phone" type="text">
+
+<h3>Education</h3>
+
+<label>Degree Name</label>
+<input id="degreeName" type="text">
+
+<label>Degree Type (ex: Bachelor's)</label>
+<input id="degreeType" type="text">
+
+<label>University</label>
+<input id="university" type="text">
+
+<label>Start Date</label>
+<input id="eduStart" type="date">
+
+<label>End Date</label>
+<input id="eduEnd" type="date">
+
+<h3>Work Experience</h3>
+
+<label>Company</label>
+<input id="company" type="text">
+
+<label>Work Start Date</label>
+<input id="workStart" type="date">
+
+<label>Is Current Job? (Yes/No)</label>
+<input id="isCurrent" type="text">
+
+<label>Work End Date (Leave empty if current)</label>
+<input id="workEnd" type="date">
+
+<label>Position Title</label>
+<input id="positionTitle" type="text">
+
+<h3>Resume (File name only)</h3>
+<input id="resume" type="text" placeholder="YourResume.pdf">
 
 <button id="save">Save</button>
 
